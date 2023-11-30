@@ -1,44 +1,102 @@
-export const items = [
-    {
-        itemNo: 1,
-        src: require('../assets/level1/apple.png'),
-        speed: 6,
-        score: 2
-    },
-    {
-        itemNo: 2,
-        src: require('../assets/level1/bananas.png'),
-        speed: 6,
-        score: 2
-    },
-    {
-        itemNo: 3,
-        src: require('../assets/level1/dragon-fruit.png'),
-        speed: 8,
-        score: 3
-    },
-    {
-        itemNo: 4,
-        src: require('../assets/level1/grapes.png'),
-        speed: 4,
-        score: 1
-    },
-    {
-        itemNo: 5,
-        src: require('../assets/level1/passion-fruit.png'),
-        speed: 8,
-        score: 3
-    },
-    {
-        itemNo: 6,
-        src: require('../assets/level1/pineapple.png'),
-        speed: 10,
-        score: 4
-    },
-    {
-        itemNo: 7,
-        src: require('../assets/level1/strawberry.png'),
-        speed: 12,
-        score: 5
-    },
-]
+export const basket = require("../assets/level1/shopping-basket.png");
+export const jar = require("../assets/level2/candy-jar.png");
+export const blackHole = require("../assets/level3/blackhole.png");
+
+export const fruits = [
+  {
+    itemNo: 1,
+    src: require("../assets/level1/apple.png"),
+    speed: 4,
+    score: 1,
+  },
+  {
+    itemNo: 2,
+    src: require("../assets/level1/bananas.png"),
+    speed: 4,
+    score: 2,
+  },
+  {
+    itemNo: 3,
+    src: require("../assets/level1/dragon-fruit.png"),
+    speed: 4,
+    score: 2,
+  },
+  {
+    itemNo: 4,
+    src: require("../assets/level1/grapes.png"),
+    speed: 4,
+    score: 1,
+  },
+  {
+    itemNo: 5,
+    src: require("../assets/level1/passion-fruit.png"),
+    speed: 4,
+    score: 2,
+  },
+];
+
+export const candies = [
+  {
+    itemNo: 1,
+    src: require("../assets/level2/candy-cane.png"),
+    speed: 6,
+    score: 4,
+  },
+  {
+    itemNo: 2,
+    src: require("../assets/level2/candy.png"),
+    speed: 6,
+    score: 5,
+  },
+  {
+    itemNo: 3,
+    src: require("../assets/level2/chocolate.png"),
+    speed: 6,
+    score: 5,
+  },
+  {
+    itemNo: 4,
+    src: require("../assets/level2/cotton-candy.png"),
+    speed: 6,
+    score: 4,
+  },
+  {
+    itemNo: 5,
+    src: require("../assets/level2/gummy-bear.png"),
+    speed: 6,
+    score: 3,
+  },
+];
+
+export const astronomy = [
+  {
+    itemNo: 1,
+    src: require("../assets/level3/moon.png"),
+    speed: 8,
+    score: 5,
+  },
+  {
+    itemNo: 2,
+    src: require("../assets/level3/neptune.png"),
+    speed: 8,
+    score: 4,
+  },
+  {
+    itemNo: 3,
+    src: require("../assets/level3/planet.png"),
+    speed: 8,
+    score: 6,
+  },
+  {
+    itemNo: 4,
+    src: require("../assets/level3/satellite.png"),
+    speed: 8,
+    score: 3,
+  },
+  {
+    itemNo: 5,
+    src: require("../assets/level3/sun.png"),
+    speed: 8,
+    score: 5,
+  },
+];
