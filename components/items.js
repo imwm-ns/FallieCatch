@@ -7,7 +7,7 @@ export const fruits = [
     itemNo: 1,
     src: require("../assets/level1/apple.png"),
     speed: 4,
-    score: 1,
+    score: 3,
   },
   {
     itemNo: 2,
@@ -19,13 +19,13 @@ export const fruits = [
     itemNo: 3,
     src: require("../assets/level1/dragon-fruit.png"),
     speed: 4,
-    score: 2,
+    score: 4,
   },
   {
     itemNo: 4,
     src: require("../assets/level1/grapes.png"),
     speed: 4,
-    score: 1,
+    score: 3,
   },
   {
     itemNo: 5,
@@ -40,7 +40,7 @@ export const candies = [
     itemNo: 1,
     src: require("../assets/level2/candy-cane.png"),
     speed: 6,
-    score: 4,
+    score: 6,
   },
   {
     itemNo: 2,
@@ -58,13 +58,13 @@ export const candies = [
     itemNo: 4,
     src: require("../assets/level2/cotton-candy.png"),
     speed: 6,
-    score: 4,
+    score: 6,
   },
   {
     itemNo: 5,
     src: require("../assets/level2/gummy-bear.png"),
     speed: 6,
-    score: 3,
+    score: 5,
   },
 ];
 
@@ -73,30 +73,30 @@ export const astronomy = [
     itemNo: 1,
     src: require("../assets/level3/moon.png"),
     speed: 8,
-    score: 5,
+    score: 7,
   },
   {
     itemNo: 2,
     src: require("../assets/level3/neptune.png"),
     speed: 8,
-    score: 4,
+    score: 8,
   },
   {
     itemNo: 3,
     src: require("../assets/level3/planet.png"),
     speed: 8,
-    score: 6,
+    score: 9,
   },
   {
     itemNo: 4,
     src: require("../assets/level3/satellite.png"),
     speed: 8,
-    score: 3,
+    score: 8,
   },
   {
     itemNo: 5,
     src: require("../assets/level3/sun.png"),
     speed: 8,
-    score: 5,
+    score: 7,
   },
 ];

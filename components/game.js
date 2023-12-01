@@ -20,7 +20,10 @@ export class Game extends React.Component {
     score: 0,
     time: 59,
     collectItems: [],
+    level: 1,
   };
+  previousScore = 0;
+  isNewScore = false;
 
   componentDidMount() {
     this.gameRunning();
@@ -28,10 +31,12 @@ export class Game extends React.Component {
 
   gameRunning() {
     this.generateItems = setInterval(() => {
-      if (this.state.score > 50) {
+      if (this.state.score > 90) {
         this.generateItem(astronomy);
+        this.state.level = 3;
       } else if (this.state.score > 30) {
         this.generateItem(candies);
+        this.state.level = 2;
       } else {
         this.generateItem(fruits);
       }
@@ -132,6 +137,11 @@ export class Game extends React.Component {
     clearInterval(this.handleItems);
     clearInterval(this.countDown);
 
+    if (this.state.score > this.previousScore) {
+      this.isNewScore = true;
+      this.previousScore = this.state.score;
+    }
+
     return (
       <View
         style={{
@@ -140,6 +150,13 @@ export class Game extends React.Component {
           alignItems: "center",
         }}
       >
+        <Text style={{ fontSize: 20, fontStyle: "italic", fontWeight: "600" }}>
+          {this.isNewScore ? "New score ✨" : ""}
+        </Text>
+        <Text style={{ fontSize: 20, fontStyle: "italic", fontWeight: "600" }}>
+          Best Score: {this.previousScore}
+        </Text>
+
         <Text style={{ fontSize: 24 }}>
           Total Score: <Text style={{ fontSize: 48 }}>{this.state.score}</Text>
         </Text>
@@ -158,14 +175,19 @@ export class Game extends React.Component {
             alignItems: "center",
           }}
           onPress={() => {
+            this.isNewScore = false;
             this.setState({
-              characterPosition: 4,
-              countItem: 0,
+              characterPosition: 3,
               currentItems: [],
+              countItem: 0,
               score: 0,
               time: 59,
               collectItems: [],
+              level: 1,
             });
+            clearInterval(this.generateItems);
+            clearInterval(this.handleItems);
+            clearInterval(this.countDown);
             this.gameRunning();
           }}
         >
@@ -201,7 +223,13 @@ export class Game extends React.Component {
             height: 45,
             left: this.state.grid[this.state.characterPosition] - 22.5,
           }}
-          source={this.state.score < 30 ? basket : this.state.score > 50 ? blackHole : jar}
+          source={
+            this.state.score < 40
+              ? basket
+              : this.state.score > 90
+              ? blackHole
+              : jar
+          }
         />
 
         <View
@@ -239,6 +267,10 @@ export class Game extends React.Component {
 
         <Text style={{ marginTop: -10, fontSize: 28, alignSelf: "center" }}>
           {this.state.score}
+        </Text>
+
+        <Text style={{ marginTop: 10, fontSize: 28, alignSelf: "center" }}>
+          Level: {this.state.level}
         </Text>
       </View>
     );
