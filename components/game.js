@@ -34,7 +34,7 @@ export class Game extends React.Component {
       if (this.state.score > 90) {
         this.generateItem(astronomy);
         this.state.level = 3;
-      } else if (this.state.score > 30) {
+      } else if (this.state.score > 40) {
         this.generateItem(candies);
         this.state.level = 2;
       } else {
@@ -185,9 +185,6 @@ export class Game extends React.Component {
               collectItems: [],
               level: 1,
             });
-            clearInterval(this.generateItems);
-            clearInterval(this.handleItems);
-            clearInterval(this.countDown);
             this.gameRunning();
           }}
         >
