@@ -22,6 +22,9 @@ const style = StyleSheet.create({
     height: 200,
   },
   text: {
-    color: "white",
+    color: "black",
+    fontSize: 48,
+    fontWeight: 'bold',
+    marginTop: 50
   },
 });
