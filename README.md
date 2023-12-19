@@ -27,5 +27,6 @@ $ npm run start
 ```
 
 **Game Demo** <br>
-[Screen_recording_20231201_220529.webm](https://github.com/imwm-ns/FallieCatch/assets/87740579/6852bde4-65e3-4077-9574-ddc324ef0e7f)
+
+[Screen_recording_20231219_215746.webm](https://github.com/imwm-ns/FallieCatch/assets/87740579/760d0b82-fd0f-4bdc-aa2d-b92c39a674e8)
 
